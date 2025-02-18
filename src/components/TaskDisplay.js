@@ -1,11 +1,11 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskDisplay({ tasks, toggleComplete }) {
+function TaskDisplay({ tasks, toggleTaskStatus }) {
   return (
     <div className="task-display">
       {tasks.map((task) => (
-        <Task key={task.id} task={task} onToggleComplete={toggleComplete} />
+        <Task key={task.id} task={task} toggleTaskStatus={toggleTaskStatus} />
       ))}
     </div>
   );

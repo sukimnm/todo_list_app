@@ -23,7 +23,7 @@ function App() {
       filter === "all" || (filter === "completed" ? task.completed : !task.completed)
   );
 
-  const toggleComplete = (id) => {
+  const toggleTaskStatus = (id) => {
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task
@@ -35,8 +35,8 @@ function App() {
     <div className="container">
       <h1>To-Do List</h1>
       <AddTask input={input} setInput={setInput} addTask={addTask} />
-      <TaskFilter filter={filter} setFilter={setFilter} />
-      <TaskDisplay tasks={filteredTasks} toggleComplete={toggleComplete} />
+      {(tasks.length !== 0) && <TaskFilter filter={filter} setFilter={setFilter} />}
+      <TaskDisplay tasks={filteredTasks} toggleTaskStatus={toggleTaskStatus} />
     </div>
   )
 }

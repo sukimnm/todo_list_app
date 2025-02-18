@@ -116,6 +116,7 @@ li.completed {
   background-color: #fff;
   padding: 10px;
   border: 1px solid #ddd;
+  border-radius: 5px;;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -148,8 +149,8 @@ li.completed {
 
 .radio-filter {
   display: inline-flex; 
-  align-items: center;
   margin-right: 15px;
+  margin-bottom: 5px;
   font-size: 1rem;
   cursor: pointer;
 }
